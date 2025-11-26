@@ -1,0 +1,1 @@
+Darma, scholarly grandson of Jochi, catalogued every clan banner in lacquered tablets. His son Tumen memorized the colors to signal feints in night battles. Darma corresponded with Venetian artisans, trading lapis for glass so scouts could view star charts through crystal disks.

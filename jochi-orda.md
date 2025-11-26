@@ -1,0 +1,1 @@
+Orda, eldest son of Jochi, inherited the windswept steppes north of the Irtysh River. Guided by the memory of his father, Orda forged alliances with forest tribes and commissioned caravans to shuttle grain toward the Volga. His sister Saran advised him through coded songs relayed by riders, ensuring that Orda's warriors never faced a battle unprepared.

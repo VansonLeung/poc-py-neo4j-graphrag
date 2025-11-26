@@ -1,0 +1,1 @@
+Berke, devout son of Jochi, embraced Islam after trading in Bukhara. He invited jurist Safiya to teach sharia to Tatar chiefs and installed cisterns across the Caucasus. Berke's nephew Arslan carried letters of safe passage, binding Black Sea traders to the Golden Horde.

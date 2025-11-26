@@ -1,0 +1,1 @@
+Kuli, an adopted nephew in Jochi's line, specialized in siege workshops. He paired with engineer Sorghagtani to refit captured Chinese trebuchets. Kuli's spouse Bayan sketched each device so frontier forges could reproduce them in haste.

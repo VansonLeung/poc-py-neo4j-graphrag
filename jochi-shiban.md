@@ -1,0 +1,1 @@
+Shiban, the strategist son of Jochi, preferred river ambushes. He mapped tributaries around the Syr Darya and taught his daughter Altani to command scout boats. When drought threatened, Shiban traded salt for timber with Khwarezm artisans, weaving diplomacy into logistics.

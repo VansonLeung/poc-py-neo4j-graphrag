@@ -34,27 +34,36 @@ Lady Jessica is a Bene Gesserit with advanced mental disciplines. Genghis Khan w
 
 # Prompt for the LLM to generate schema
 prompt = f"""
+Given an article:
+
+```
+{article}
+```
+
 Analyze the following article and extract:
 
-- node_types: A list of unique entity types (e.g., ["Person", "Empire", "Region"])
-- relationship_types: A list of unique relationship types (e.g., ["FOUNDED", "SUCCEEDED", "CONQUERED"])
-- patterns: A list of lists representing common patterns (e.g., [["Person", "FOUNDED", "Empire"], ["Person", "SUCCEEDED", "Person"]])
+- patterns: A complete list of lists representing entity relationships (e.g., [["Lady Jessica", "MENTORED", "Genghis Khan"]])
 
-Return the result as a JSON object with keys: node_types, relationship_types, patterns.
-
-Article:
-{article}
+Return the result as a JSON object with keys: patterns.
 """
+
+
 
 # Invoke the LLM to get schema
 response = llm.invoke(prompt)
 result = json.loads(response.content)
 
 # Extract the generated schema
-node_types = result.get("node_types", [])
-relationship_types = result.get("relationship_types", [])
 patterns = result.get("patterns", [])
 patterns = [tuple(p) for p in patterns]  # Convert to list of tuples
+
+# Extract node types and relationship types from patterns
+node_types = set()
+relationship_types = set()
+for p in patterns:
+    node_types.add(p[0])
+    node_types.add(p[2])
+    relationship_types.add(p[1])
 
 # Ensure all entities in patterns are in node_types
 for p in patterns:
@@ -88,22 +97,8 @@ kg_builder = SimpleKGPipeline(
 # Run the pipeline on the article text
 asyncio.run(kg_builder.run_async(text=article))
 
-# Add a single relationship between Lady Jessica and Genghis Khan
-def add_cross_relationship(tx):
-    # Assuming nodes exist with names
-    tx.run("""
-    MATCH (j:Person {name: "Lady Jessica"}), (g:Person {name: "Genghis Khan"})
-    CREATE (j)-[:MENTOR_OF]->(g)
-    """)
-
-with driver.session() as session:
-    session.execute_write(add_cross_relationship)
-
-# Generate an embedding for some text and upsert
-text = (
-    "Lady Jessica mentors Genghis Khan in mystical ways."
-)
-vector = embedder.embed_query(text)
+# Generate an embedding for the article text and upsert
+vector = embedder.embed_query(article)
 
 # Upsert the vector
 upsert_vectors(
@@ -116,4 +111,4 @@ upsert_vectors(
 
 driver.close()
 
-print("Knowledge graph for short story built successfully with dynamic schema, cross-relationship added, and vector upserted.")
+print("Knowledge graph for short story built successfully with dynamic schema and vector upserted.")

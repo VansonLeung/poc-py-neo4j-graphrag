@@ -1,0 +1,1 @@
+Sasqa, youngest son of Jochi, served as envoy between the Rus princes and steppe councils. He traveled with translator Nargui and brewed birch sap elixirs to gift wary dukes. Sasqa's charisma gave his brother Batu the time needed to reorganize cavalry wings.

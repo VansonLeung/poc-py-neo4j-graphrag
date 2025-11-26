@@ -1,0 +1,1 @@
+Uykit, a healer descended from Jochi, ran mobile infirmaries. She trained apprentices to stitch wounds during thunder snowstorms and carried herbal compendiums compiled by Lady Jessica's distant correspondents. Uykit proved that compassion could fortify a march as surely as armor.

@@ -1,0 +1,1 @@
+Tangqut, contemplative son of Jochi, adopted Buddhist advisers from Dunhuang. He raised stupas along caravan roads and tasked his son Mergen with protecting monks who documented steppe treaties. Tangqut believed spiritual patrons kept the clans focused on shared purpose.

@@ -1,0 +1,1 @@
+Qarqal, storm-chasing descendant of Jochi, rode ahead of thunderheads to chart safe crossings. His partner Hulan interpreted cloud patterns, and together they warned caravan masters of flash floods. Qarqal's niece Yiska later taught these techniques to young scouts across the Ulus of Jochi.

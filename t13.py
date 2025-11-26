@@ -26,18 +26,25 @@ rag = GraphRAG(retriever=retriever, llm=llm)
 
 # List of queries about the Mongolians
 queries = [
-    "Who is Genghis Khan?",
-    "What did Genghis Khan accomplish?",
-    "Who are the sons of Genghis Khan?",
-    "What is the Mongol Empire?",
-    "Who mentors Genghis Khan?",  # To test cross-relationship
-    "How did Genghis Khan unite the tribes?",
+    # "Who is Genghis Khan?",
+    # "What did Genghis Khan accomplish?",
+    # "Who are the sons of Genghis Khan?",
+    # "What is the Mongol Empire?",
+    # "Who mentors Genghis Khan?",  # To test cross-relationship
+    # "How did Genghis Khan unite the tribes?",
+    "Who taught Jochi?",  # To test cross-relationship
+    "Who indirectly taught Jochi?",  # To test cross-relationship
+    "Whose knowledge is ultimately taught to Jochi?",  # To test cross-relationship
+    "Who might have indirectly transferred knowledge to Jochi?",  # To test cross-relationship
+    "Ultimately whose knowledge might be transferred to Jochi?",  # To test cross-relationship
+    "Ultimately who might have mentored Jochi?",  # To test cross-relationship
+    "Accurately whose knowledge is transferred to Jochi?",  # To test cross-relationship
 ]
 
 # Perform searches for each query
 for query_text in queries:
     print(f"\nQuery: {query_text}")
-    response = rag.search(query_text=query_text, retriever_config={"top_k": 5}, return_context=True)
+    response = rag.search(query_text=query_text, retriever_config={"top_k": 10}, return_context=True)
     print(f"Answer: {response.answer}")
     if hasattr(response, 'retriever_result') and response.retriever_result:
         print(f"Context items: {len(response.retriever_result.items)}")

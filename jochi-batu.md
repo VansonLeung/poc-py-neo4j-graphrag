@@ -1,0 +1,1 @@
+Batu, second son of Jochi, established Sarai beside the lower Volga. He relied on his cousin Berke to negotiate with Persian merchants while Batu's wife Yelun curated an archive of conquered laws. Together they orchestrated winter encampments so that cavalry reserves could strike westward at spring thaw.
